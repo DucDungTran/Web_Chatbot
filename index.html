@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="brand">
+                <div class="logo" aria-hidden="true">🤖</div>
+                <div class="titles">
+                    <h1 class="title">Demo Bot</h1>
+                    <p class="subtitle">Powered by fixed responses</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="chat">
+            <div id="messages" class="messages" aria-live="polite"></div>
+        </main>
+
+        <form id="composer" class="composer" autocomplete="off">
+            <input id="input" class="input" type="text" name="message" placeholder="Type your message..." aria-label="Message" />
+            <button class="send" type="submit" aria-label="Send">Send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
