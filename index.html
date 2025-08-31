@@ -3,29 +3,62 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Chatbot</title>
+    <title>AI Assistant - Modern Chat Interface</title>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="app">
         <header class="header">
-            <div class="brand">
-                <div class="logo" aria-hidden="true">🤖</div>
-                <div class="titles">
-                    <h1 class="title">Demo Bot</h1>
-                    <p class="subtitle">Powered by fixed responses</p>
+            <div class="header-content">
+                <div class="brand">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="titles">
+                        <h1 class="title">AI Assistant</h1>
+                        <p class="subtitle">Powered by Advanced AI</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn" aria-label="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button class="action-btn" aria-label="Help">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
                 </div>
             </div>
         </header>
 
         <main class="chat">
-            <div id="messages" class="messages" aria-live="polite"></div>
+            <div class="chat-container">
+                <div id="messages" class="messages" aria-live="polite"></div>
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="typing-text">AI is typing...</span>
+                </div>
+            </div>
         </main>
 
-        <form id="composer" class="composer" autocomplete="off">
-            <input id="input" class="input" type="text" name="message" placeholder="Type your message..." aria-label="Message" />
-            <button class="send" type="submit" aria-label="Send">Send</button>
-        </form>
+        <div class="composer-container">
+            <form id="composer" class="composer" autocomplete="off">
+                <div class="input-wrapper">
+                    <input id="input" class="input" type="text" name="message" placeholder="Type your message here..." aria-label="Message" />
+                    <button class="send" type="submit" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="composer-footer">
+                    <span class="composer-hint">Press Enter to send, Shift+Enter for new line</span>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
